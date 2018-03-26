@@ -1,0 +1,141 @@
+doctype html
+head
+	meta(charset="UTF-8")
+	title Test for Pixelplex
+	link(href="css/main.css" rel="stylesheet")
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+body
+	header
+		.container
+			a(href="#").header__logo
+				img(src="img/logo.png", alt="Pixelplex")
+			.menu-icon.dont-active
+				div
+				div
+				div
+				div
+			ul.header__menu
+				li
+					a(href="#").active Увеличиваем конверсию
+				li
+					a(href="#") Принцип работы
+				li
+					a(href="#") №1 в Беларуси
+				li
+					a(href="#") О маячке
+				li
+					a(href="#") Ваш бизнес
+				li
+					a(href="#") Контакты
+	section#conversion
+		.container
+			.iphone__block
+				.iphone__wrap
+					.iphone
+						.iphone__camera
+						.iphone__loudspeaker
+						.iphone__display
+							img(src="img/addidas.png", alt="Addidas? No, pixelplex").iphone__display_addidas
+							.iphone__display_percent
+								span -70
+								span %
+							p.iphone__display_more НА<br>ВТОРУЮ ПОКУПКУ
+							p.iphone__display_cost Более 100 моделей обуви по цене<br>ниже 850 000 рублей за пару!
+						.iphone__button
+						.iphone__sound
+							.iphone__sound_lockSound
+							.iphone__sound_up
+							.iphone__sound_down
+						.iphone__lock
+					ul.mobilePlatforms
+						li
+							a(href="#").mobilePlatforms__android
+						li
+							a(href="#").mobilePlatforms__ios
+						li
+							a(href="#").mobilePlatforms__wp
+				.iphone__someCircle
+					img(src="img/icons/someCircle.png", alt="Pixelplex, hello")
+			.conversion__block
+				h1 как повысить<br>посещаемость<br>магазина на 15%
+				p <b>Уникальная и инновационная технология для Беларуси.</b><br><br>Отправляйте автоматически любому человеку в радиусе 5-ти метров вокург вашего магазина <b>сообщения о скидках и акциях прямо в его смартфон!</b><br><br>Отслеживайте поведение внутри помещения, зонируйте ваш магазин, сообщайте об акциях в том отделе, где находится посетитель.<br><br><b>Система полностью автоматизированна и не требует времени сотрудников на обслуживание.</b>
+		.container
+			.iBeacon
+				a(href="#") Подробнее о системе iBeacon
+	nav
+		.container
+			a(href="#").header__logo
+				img(src="img/logo.png", alt="Pixelplex")
+			ul.header__menu
+				li
+					a(href="#") Увеличиваем конверсию
+				li
+					a(href="#").active Принцип работы
+				li
+					a(href="#") №1 в Беларуси
+				li
+					a(href="#") О маячке
+				li
+					a(href="#") Ваш бизнес
+				li
+					a(href="#") Контакты
+	section#howItWork
+		.container
+			.road
+				h1 КАК ЭТО РАБОТАЕТ
+				img(src="img/road.jpg", alt="")
+			.iphone__block
+				.iphone__wrap
+					.iphone
+						.iphone__camera
+						.iphone__loudspeaker
+						.iphone__display
+							img(src="img/iphone-screen.jpg", alt="Pixelplex, hi").iphone__display_screen
+						.iphone__button
+						.iphone__sound
+							.iphone__sound_lockSound
+							.iphone__sound_up
+							.iphone__sound_down
+						.iphone__lock
+		.container
+			.iWant
+				a(href="#") Хочу так же
+	nav
+		.container
+			a(href="#").header__logo
+				img(src="img/logo.png", alt="Pixelplex")
+			ul.header__menu
+				li
+					a(href="#") Увеличиваем конверсию
+				li
+					a(href="#") Принцип работы
+				li
+					a(href="#").active №1 в Беларуси
+				li
+					a(href="#") О маячке
+				li
+					a(href="#") Ваш бизнес
+				li
+					a(href="#") Контакты
+	section#projects
+		.container
+			article.projects__info
+				h1 ПЕРВЫЕ ПРОЕКТЫ<br>В БЕЛАРУСИ<br>С ТЕХНОЛОГИЕЙ<br>iBEACON
+				p Здесь будет расписано использование маячков в реальном проекте. В Минске проходит XXII Международный специализированный форум по информационным и банковским технологиям - "ТИБО-2015". Из нового также стоит упомянуть v-banking – универсальное мобильное приложение, которое позволяет объединить в один аккаунт все свои банковские карты и управлять ими со смартфона.
+				a(href="#") Посмотреть еще проект
+			.projects__slider
+				.projects__slider_wrap
+					img(src="img/slider1920.png", alt="Pixelplex, hi")
+					img(src="img/slider1920.png", alt="Pixelplex, hi")
+					img(src="img/slider1920.png", alt="Pixelplex, hi")
+					img(src="img/slider1920.png", alt="Pixelplex, hi")
+				#bx-pager
+					a(data-slide-index="0")
+					a(data-slide-index="1")
+					a(data-slide-index="2")
+					a(data-slide-index="3")
+				a(href="#").projects__getPresentation Заказать презентацию
+				span "ТИБО-2015"
+script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+script(src="js/jquery.bxslider.min.js")
+script(src="js/main.js")

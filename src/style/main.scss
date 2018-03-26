@@ -1,0 +1,1056 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+@import 'normalize';
+@import 'fonts';
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+@font-face {
+    font-family: "UM";
+    src: url("../fonts/Ubuntu-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fonts/Ubuntu-Regular.ttf");
+}
+
+@font-face {
+    font-family: "GM";
+    src: url("../fonts/GothamProMedium.ttf");
+}
+
+@font-face {
+    font-family: "UL";
+    src: url("../fonts/Ubuntu-Light.ttf");
+}
+
+@mixin t {
+    transition: .4s ease-in-out;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+a {
+    font-weight: 400;
+}
+
+body {
+    background: #929292;
+    max-width: 100%;
+}
+
+.container {
+    @media only screen and (max-width: 1920px) {
+        max-width: 1608px;
+        margin: auto;
+    }
+    @media only screen and (max-width: 1280px) {
+        margin: auto;
+    }
+    @media only screen and (max-width: 1024px) {
+        margin: auto;
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+header {
+    background: #f1f4f6;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 89px;
+    }
+    padding-bottom: 90px;
+}
+
+nav {
+    background: #f1f4f6;
+    padding-bottom: 0;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 89px;
+    }
+}
+
+.header {
+    &__menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'UM', sans-serif;
+            color: #242321;
+            padding: 9px 20px;
+            &.active {
+                border: 1px solid #4a4d4e;
+                border-radius: 3px;
+            }
+            margin: 0 2.5px;
+        }
+    }
+    &__logo {
+        display: block;
+    }
+}
+
+#conversion {
+    background: #f1f4f6;
+    .container {
+        display: flex;
+        flex-direction: row;
+        &:last-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            padding-bottom: 5%;
+        }
+    }
+}
+
+.iphone {
+    height: 645px;
+    width: 305px;
+    border: 3px solid #dfdfdf;
+    border-radius: 41px;
+    background: #fff;
+    position: relative;
+    order: 3;
+    &__block {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: flex-end;
+    }
+    &__camera {
+        background: #cccccc;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        margin: auto;
+        margin-top: 25px;
+    }
+    &__loudspeaker {
+        width: 57px;
+        height: 13px;
+        border-radius: 5px;
+        background: #cccccc;
+        margin: auto;
+        margin-top: 12px;
+    }
+    &__display {
+        width: 257px;
+        border: 1px solid #dbdbdb;
+        background: #f5f5f5;
+        height: 458px;
+        margin: auto;
+        margin-top: 30px;
+        &_addidas {
+            max-width: 67px;
+            display: block;
+            margin: auto;
+            margin-top: 46px;
+        }
+        &_percent {
+            text-align: center;
+            margin-top: 57px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            span {
+                font-family: "Ubuntu", sans-serif;
+                font-size: 111px;
+                color: #000;
+                &:last-child {
+                    font-size: 50px;
+                }
+            }
+        }
+        &_more {
+            font-family: UM,sans-serif;
+            font-size: 24.68px;
+            color: #000;
+            text-align: right;
+            padding: 0 11px;
+            margin-top: -38px;
+        }
+        &_cost {
+            font-family: Ubuntu,sans-serif;
+            font-size: 12px;
+            color: #000;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 69px;
+        }
+    }
+    &__button {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 3px solid #cccccc;
+        margin: auto;
+        margin-top: 18px;
+    }
+    &__sound {
+        position: absolute;
+        top: 86px;
+        left: -6px;
+        &_lockSound {
+            width: 3px;
+            height: 29px;
+            background: #fff;
+            border: 3px solid #dfdfdf;
+            border-left: 2px solid #dfdfdf;
+            border-radius: 4px 3px 3px 4px;
+            margin-bottom: 28px;
+        }
+        &_up,
+        &_down {
+            width: 3px;
+            height: 22px;
+            background: #fff;
+            border: 3px solid #dfdfdf;
+            border-left: 2px solid #dfdfdf;
+            border-radius: 4px 3px 3px 4px;
+            margin-bottom: 28px;
+        }
+    }
+    &__lock {
+        position: absolute;
+        left: 202px;
+        top: -5px;
+        width: 49px;
+        height: 3px;
+        background: #fff;
+        border: 3px solid #dfdfdf;
+        border-top: 2px solid #dfdfdf;
+        border-radius: 3px 4px 4px 3px;
+    }
+    &__someCircle {
+        margin-left: 116px;
+        margin-right: 67px;
+        margin-top: 41px;
+    }
+}
+
+.mobilePlatforms {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 21px;
+    li {
+        margin-right: 32px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: #353535;
+        display: block;
+    }
+    &__android {
+        background: url(../img/icons/android.png) no-repeat;
+        background-position: 10px 8px;
+    }
+    &__ios {
+        background: url(../img/icons/ios.png) no-repeat;
+        background-position: 9px 7px;
+    }
+    &__wp {
+        background: url(../img/icons/wp.png) no-repeat;
+        background-position: 9px 8px;
+    }
+}
+
+.conversion {
+    &__block {
+        order: 1;
+        width: 50%;
+        h1 {
+            font-size: 44px;
+            font-family: "GM", sans-serif;
+            text-transform: uppercase;
+            line-height: 49px;
+        }
+        p {
+            margin-top: 87px;
+            font-family: "Ubuntu", sans-serif;
+            font-size: 28px;
+            color: #4a4d4e;
+            line-height: 35px;
+            br:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+.iBeacon {
+    width: 50%;
+    a {
+        background: #f3379d;
+        text-decoration: none;
+        font-family: "UM", sans-serif;
+        font-size: 24px;
+        padding: 23px 66px 17px 31px;
+        color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 3px 0 #b12873;
+        position: relative;
+        display: inline-block;
+        @include t;
+        &:after {
+            content: '';
+            background: url(../img/icons/arrow.png) no-repeat;
+            width: 22px;
+            height: 14px;
+            position: absolute;
+            @include t;
+            top: 32px;
+            right: 33px;
+        }
+        &:hover:after {
+            top: 34px;
+            @include t;
+            will-change: transform;
+        }
+        &:hover {
+            background: #ff41aa;
+            @include t;
+        }
+    }
+}
+
+#howItWork {
+    background: #fff;
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 88px;
+        &:first-child {
+            padding-bottom: 10px;
+        }
+        &:last-child {
+            padding-top: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+    .iphone {
+        &__block {
+            width: 19.44%;
+        }
+    }
+}
+
+.road {
+    max-width: 78.56%;
+    h1 {
+        color: #020102;
+        font-size: 54px;
+        font-family: "GM", sans-serif;
+        padding-bottom: 70px;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.iWant {
+    max-width: 314px;
+    min-width: 310px;
+    text-align: center;
+    margin-top: -10%;
+    a {
+        background: #f3379d;
+        text-decoration: none;
+        font-family: "UM", sans-serif;
+        font-size: 24px;
+        padding: 23px 67px 17px 67px;
+        color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 3px 0 #b12873;
+        position: relative;
+        margin: auto;
+        display: inline-block;
+        @include t;
+        &:hover {
+            background: #ff41aa;
+            @include t;
+        }
+    }
+}
+
+#projects {
+    background: #01b5e6;
+    padding-bottom: 77px;
+    .container {
+        padding-top: 72px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.projects {
+    &__info {
+        width: 75%;
+        h1 {
+            font-family: "GM", sans-serif;
+            font-size: 54px;
+            color: #fff;
+            padding-top: 56px;
+            letter-spacing: 4px;
+            padding-bottom: 60px;
+        }
+        p {
+            font-family: Ubuntu,sans-serif;
+            color: #fff;
+            line-height: 35px;
+            font-size: 24px;
+            padding-right: 281px;
+            padding-bottom: 40px;
+        }
+        a {
+            font-family: Ubuntu,sans-serif;
+            font-size: 24px;
+            color: #f2f8b0;
+            font-weight: bold;
+            @include t;
+            &:hover {
+                @include t;
+                color: #e1ee4f;
+            }
+        }
+    }
+    &__slider {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        span {
+            display: none;
+        }
+        .bx-wrapper {
+            padding-bottom: 63px;
+            position: relative;
+        }
+        .bx-viewport {
+
+        }
+        .bx-controls {
+            top: 40%;
+            position: absolute;
+            width: 100%;
+        }
+        .bx-next {
+            width: 23px;
+            height: 37px;
+            background: url(../img/icons/next.png) no-repeat center;
+            display: block;
+            right: -37px;
+            position: absolute;
+            @include t;
+            &:hover {
+                @include t;
+                opacity: 0.7;
+            }
+        }
+        .bx-prev {
+            width: 23px;
+            height: 37px;
+            background: url(../img/icons/next.png) no-repeat center;
+            display: block;
+            left:-37px;
+            transform: rotate(180deg);
+            position: absolute;
+            @include t;
+            &:hover {
+                @include t;
+                opacity: 0.7;
+            }
+        }
+        
+        .bx-controls-direction {
+            position: relative;
+        }
+    }
+    &__getPresentation {
+        background: #f3379d;
+        font-family: "UM",sans-serif;
+        font-size: 24px;
+        padding: 23px 32px 17px;
+        color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 3px 0 #b12873;
+        position: relative;
+        text-decoration: none;
+        margin: auto;
+        display: inline-block;
+        margin-top: 20px;
+        @include t;
+        &:hover {
+            background: #ff41aa;
+            @include t;
+        }
+    }
+}
+
+#bx-pager {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -28px;
+    z-index: 2;
+    a {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #fff;
+        display: block;
+        margin-right: 12px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.active {
+            background: #00708e;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width: 1592px) {
+    .bx-controls {
+        display: none;
+    }
+    #bx-pager {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width:1281px) and (max-width: 1390px) {
+    .iWant {
+        margin-top: -7%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 40px;
+    }
+    nav {
+        display: none;
+    }
+    .header {
+        &__menu {
+            a {
+                font-size: 16px;
+                padding: 9px 5px;
+            }
+        }
+    }
+    .conversion {
+        &__block {
+            p {
+                margin-top: 46px;
+                font-size: 22px;
+                line-height: 28px;
+                br:nth-child(2) {
+                    display: block;
+                }
+            }
+            h1 {
+                font-size: 38px;
+            }
+        }
+    }
+    #conversion {
+        padding-top: 59px;
+        background: #ffffff;
+    }
+    header {
+        padding-bottom: 0;
+    }
+    .iphone {
+        &__block {
+            justify-content: flex-end;
+        }
+        &__someCircle {
+            margin: 0 auto;
+        }
+        &__wrap {
+            
+        }
+    }
+    .iBeacon {
+        margin-top: -70px;
+        a {
+            
+        }
+    }
+    .road {
+        width: 66.56%;
+        h1 {
+            font-size: 34px;
+        }
+    }
+    #howItWork {
+        .iphone {
+            &__block {
+                width: 33.44%;
+            }
+        }
+        padding-bottom: 76px;
+    }
+    .iWant {
+        margin: auto 0;
+    }
+    .projects {
+        &__info {
+            width: 48%;
+            h1 {
+                font-size: 38px;
+                padding-bottom: 50px;
+            }
+            p,
+            a {
+                padding-right: 0;
+                font-size: 22px;
+            }
+        }
+    }
+    #projects {
+        .container {
+            padding-top: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width: 937px) {
+    .iphone__someCircle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 799px) {
+    html, body {
+        font-size: 100%;
+    }
+    .container {
+        max-width: 984px;
+        padding: 0 20px;
+    }
+    nav {
+        display: none;
+    }
+    .header {
+        &__menu {
+            a {
+                font-size: 1.5vw;
+                padding: 0;
+                &.active {
+                    border: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .conversion {
+        &__block {
+            p {
+                margin-top: 18px;
+                font-size: 2.5vw;
+                line-height: 28px;
+                br:nth-child(2) {
+                    display: block;
+                }
+            }
+            h1 {
+                font-size: 32px;
+            }
+        }
+    }
+    #conversion {
+        padding-top: 45px;
+        background: #f5f5f5;
+    }
+    .iphone {
+        height: 516px;
+        width: 246px;
+        &__lock {
+            left: 159px;
+        }
+        &__display {
+            width: 205px;
+            height: 366px;
+            overflow: hidden;
+            margin-top: 24px;
+            &_addidas {
+                margin-top: 28px;
+                max-width: 46px;
+            }
+            &_percent {
+                margin-top: 49px;
+                span {
+                    font-size: 66px;
+                    &:last-child {
+                        font-size: 34px;
+                    }
+                }
+            }
+            &_more {
+                margin-top: -21px;
+                font-size: 17.68px;
+            }
+            &_cost {
+                font-size: 10px;
+            }
+        }
+        &__button {
+            width: 43px;
+            height: 43px;
+            margin-top: 14px;
+        }
+        &__camera {
+            width: 10px;
+            height: 10px;
+            margin-top: 20px;
+        }
+        &__loudspeaker {
+            width: 46px;
+            height: 11px;
+            margin-top: 9px;
+        }
+        &__block {
+            justify-content: flex-start;    
+        }
+        &__someCircle {
+            margin: 0 auto;
+        }
+        &__wrap {
+            margin: auto
+        }
+    }
+    .iBeacon {
+        margin-top: 0px;
+        a {
+            
+        }
+    }
+    .road {
+        max-width: 69%;
+        min-width: 10%;
+        h1 {
+            font-size: 30px;
+        }
+    }
+    #howItWork {
+        .iphone {
+            &__block {
+                max-width: 252px;
+                min-width: 252px;
+                width: 100%;
+            }
+        }
+        padding-bottom: 15px;
+        .container {
+            padding-top: 48px;
+        }
+    }
+    .iWant {
+        margin: auto 0;
+        max-width: 252px;
+        min-width: 252px;
+        a {
+            font-size: 16px;
+        }
+    }
+    .projects {
+        &__info {
+            width: 48%;
+            h1 {
+                font-size: 32px;
+                padding-bottom: 36px;
+                padding-top: 0;
+            }
+            p,
+            a {
+                padding-right: 0;
+                font-size: 21px;
+                line-height: 33px;
+            }
+        }
+    }
+    #projects {
+        padding-bottom: 40px;
+        .container {
+            padding-top: 50;
+        }
+    }
+    .iBeacon a {
+        font-size: 17px;
+        &:after {
+            top: 27px;
+        }
+    }
+}
+
+@media only screen and (max-width: 798px) {
+    .menu-icon {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: absolute;
+        justify-content: space-between;
+        top: 27px;
+        z-index: 6;
+        &.dont-active {
+            opacity: 0.2;
+            z-index: 6;
+        }
+        div {
+            width: 23px;
+            height: 24px;
+            background: #000;
+            &:first-child {
+                background: transparent;
+                border: 1px solid #d43e27;
+                box-sizing: border-box;
+            }
+        }
+    }
+    body {
+        position: relative;
+    }
+    .header {
+        &__menu {
+            display: block !important;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #ffffff;
+            z-index: 4;
+            will-change: transform;
+            transform: translateX(-103%);
+            -webkit-transition: -webkit-transform .3s linear;
+            transition: -webkit-transform .3s linear;
+            transition: transform .3s linear;
+            transition: transform .3s linear,-webkit-transform .3s linear;
+            overflow-x: scroll;
+            padding-bottom: 20px;
+            width: 80%;
+            box-shadow: 3px 0 3px rgba(0,0,0,0.5);
+            padding-top: 30%;
+            a {
+                margin: 4px auto;
+                font-size: 5vw;
+                padding: 9px 4px;
+                display: block;
+                width: 86%;
+            }
+            &.open {
+                -webkit-transform: none !important;
+                -ms-transform: none !important;
+                transform: none !important;
+                -webkit-transition: -webkit-transform .3s linear !important;
+                transition: -webkit-transform .3s linear !important;
+                transition: transform .3s linear !important;
+                transition: transform .3s linear,-webkit-transform .3s linear !important;
+            }
+        }
+        &__logo {
+            margin: auto;
+        }
+    }
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 4;
+        .container {
+            height: 109px;
+        }
+    }
+    .container {
+        width: 94%;
+        padding: 0 3%;
+    }
+    #conversion {
+        background: #f5f5f5;
+        padding-top: 109px;
+        .container:first-child {
+            flex-direction: column;
+            .conversion__block {
+                order: 1;
+                width: 100%;
+                h1 {
+                    text-align: center;
+                    font-size: 36px;
+                    padding-bottom: 36px;
+                }
+                p {
+                    display: none;
+                }
+            }
+            .iphone__block {
+                order: 2;
+                width: 100%;
+            }
+        }
+        .container:last-child {
+            justify-content: center;
+            padding-bottom: 32px;
+        }
+    }
+    .iphone {
+        &__wrap {
+            margin: auto;
+        }
+    }
+    .iBeacon {
+        width: 100%;
+        margin-top: 36px;
+        a {
+            margin: auto;
+            display: block;
+            text-align: center;
+            font-size: 4.4vw;
+        }
+    }
+    .mobilePlatforms {
+        margin-top: 32px;
+    }
+    #howItWork {
+        padding-bottom: 32px;
+        .container {
+            padding-top: 32px;
+            position: relative;
+            &:first-child {
+                padding-bottom: 32px;
+            }
+        }
+        .iphone__block {
+            width: auto;
+            transform: scale(.2);
+            position: absolute;
+            top: -80px;
+            right: 0.1%;
+        }
+    }
+    .road {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    .iWant {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        a {
+            width: 100%;
+            padding: 23px 0 17px;
+        }
+    }
+    #projects {
+        .container {
+            padding-top: 32px;
+            flex-direction: column;
+        }
+        padding-bottom: 32px;
+    }
+    .projects {
+        &__info {
+            width: 100%;
+            h1 {
+                text-align: center;
+                font-size: 36px;
+                padding-top: 0;
+            }
+            p {
+                display: none;
+            }
+            a {
+                display: none;
+            }
+        }
+        &__slider {
+            width: 100%;
+            span {
+                display: block;
+                font-family: "Ubuntu", sans-serif;
+                font-size: 30px;
+                text-align: center;
+                padding-top: 32px;
+                color: #fff;
+            }
+        }
+        &__getPresentation {
+            width: 100%;
+            padding: 23px 0px 17px;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-height: 280px) and (max-height: 400px) {
+    .header__menu {
+        padding-top: 14%;
+        a {
+            margin: -1px auto;
+            margin-left: auto;
+            font-size: 2vw;
+            padding: 9px 4px;
+            display: inline-block;
+            width: auto;
+            margin-left: 4%;
+        }
+    }
+}
+
+@media only screen and (max-width: 352px) {
+    .projects__info h1,
+    #conversion .container:first-child .conversion__block h1 {
+        font-size: 30px;
+    }
+}
